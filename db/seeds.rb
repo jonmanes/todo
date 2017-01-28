@@ -14,7 +14,7 @@ end
 users = User.all
 
 admin = User.create!(
-   username:    'admin@example.com',
+   username: 'admin@example.com',
    password: 'helloworld',
  )
 
