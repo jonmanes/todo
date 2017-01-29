@@ -20,16 +20,14 @@ admin = User.create!(
 
  20.times do
    List.create!(
-   user: admin,
-   title: Faker::Hacker.adjective,
-   description: Faker::Hacker.say_something_smart
+   name: Faker::Hacker.adjective,
+   permissions: 'private'
    )
  end
  lists = List.all
 
  20.times do
    Item.create!(
-   list: lists.first,
    description: Faker::Hacker.say_something_smart
    )
  end

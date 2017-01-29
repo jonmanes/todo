@@ -14,16 +14,14 @@
 ActiveRecord::Schema.define(version: 20170126022514) do
 
   create_table "items", force: :cascade do |t|
-    t.string   "list"
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "lists", force: :cascade do |t|
-    t.string   "user"
-    t.string   "title"
-    t.string   "description"
+    t.string   "name"
+    t.string   "permissions"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
