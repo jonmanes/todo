@@ -20,6 +20,7 @@ admin = User.create!(
 
  20.times do
    List.create!(
+   user_id: User.first.id,
    name: Faker::Hacker.adjective,
    permissions: 'private'
    )
@@ -28,6 +29,7 @@ admin = User.create!(
 
  20.times do
    Item.create!(
+   list_id: List.first.id,
    description: Faker::Hacker.say_something_smart
    )
  end
